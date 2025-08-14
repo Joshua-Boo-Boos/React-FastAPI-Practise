@@ -108,7 +108,7 @@ function App() {
     getQuestion();
   }
   const submitLoginDetails = async () => {
-    if (username.startsWith("<script>") || password.startsWith("<script>") || username.indexOf("'") !== -1 || password.indexOf("'") !== -1) {
+    if (inputUsername.startsWith("<script>") || inputPassword.startsWith("<script>") || inputUsername.indexOf("'") !== -1 || inputPassword.indexOf("'") !== -1) {
       alert('This is not allowed');
     } else {
       const hashedUsername = SHA512(inputUsername + username_salt_for_hashes).toString();
